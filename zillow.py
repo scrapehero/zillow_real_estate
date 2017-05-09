@@ -79,3 +79,4 @@ if __name__=="__main__":
 		writer.writeheader()
 		for row in  scraped_data:
 			writer.writerow(row)
+
