@@ -15,11 +15,18 @@ def parse(zipcode,filter=None):
 	
 	for i in range(5):
 		try:
-			response = requests.get(url)
+			headers= {
+						'accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+						'accept-encoding':'gzip, deflate, sdch, br',
+						'accept-language':'en-GB,en;q=0.8,en-US;q=0.6,ml;q=0.4',
+						'cache-control':'max-age=0',
+						'upgrade-insecure-requests':'1',
+						'user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+			}
+			response = requests.get(url,headers=headers)
 			parser = html.fromstring(response.text)
 			search_results = parser.xpath("//div[@id='search-results']//article")
 			properties_list = []
-			
 			for properties in search_results:
 				raw_address = properties.xpath(".//span[@itemprop='address']//span[@itemprop='streetAddress']//text()")
 				raw_city = properties.xpath(".//span[@itemprop='address']//span[@itemprop='addressLocality']//text()")
@@ -79,4 +86,3 @@ if __name__=="__main__":
 		writer.writeheader()
 		for row in  scraped_data:
 			writer.writerow(row)
-
