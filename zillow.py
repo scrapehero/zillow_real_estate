@@ -23,10 +23,11 @@ def parse(zipcode,filter=None):
 						'upgrade-insecure-requests':'1',
 						'user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
 			}
-			response = requests.get(url,headers=headers)
+			response = requests.get(url, headers=headers, verify=False)
 			parser = html.fromstring(response.text)
 			search_results = parser.xpath("//div[@id='search-results']//article")
 			properties_list = []
+			
 			for properties in search_results:
 				raw_address = properties.xpath(".//span[@itemprop='address']//span[@itemprop='streetAddress']//text()")
 				raw_city = properties.xpath(".//span[@itemprop='address']//span[@itemprop='addressLocality']//text()")
@@ -80,9 +81,11 @@ if __name__=="__main__":
 	print "Fetching data for %s"%(zipcode)
 	scraped_data = parse(zipcode,sort)
 	print "Writing data to output file"
+	
 	with open("properties-%s.csv"%(zipcode),'w')as csvfile:
 		fieldnames = ['title','address','city','state','postal_code','price','facts and features','real estate provider','url']
 		writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 		writer.writeheader()
 		for row in  scraped_data:
 			writer.writerow(row)
+
