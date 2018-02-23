@@ -47,6 +47,6 @@ python3 zillow.py 02126 newest
 
 This will create a csv file:
 
-[Sample Output] (https://github.com/scrapehero/zillow_real_estate/blob/master/properties-02126.csv)
+[Sample Output] (https://raw.githubusercontent.com/scrapehero/zillow_real_estate/master/properties-02126.csv)
  
  
