@@ -1,6 +1,6 @@
 # Zillow Real Estate Listing Scraper
 
-This script will scrape Zillow.com, an online real estate database to extract real estate listings available based on a zip code.
+This script will scrape Zillow.com, an online real estate database to extract real estate listings available based on a zip code. If you would like to know more about this scraper you can check out out blog post at this link https://www.scrapehero.com/how-to-scrape-real-estate-listings-on-zillow-com-using-python-and-lxml/
 
 ## Getting Started
 
@@ -36,8 +36,8 @@ pip3 install lxml
 Python Requests, to make requests and download the HTML content of the pages (http://docs.python-requests.org/en/master/user/install/).
 
 ## Running the scraper
-You must run the script using python with arguments for zip code and sort. The sort argument has the options ‘newest’ and ‘cheapest’
-listings available. As an example, to find the listings of the newest properties up for sale in Boston, Massachusettswe would run the 
+You must run the script using Python with arguments for zip code and sort. The sort argument has the options ‘newest’ and ‘cheapest’
+listings available. As an example, to find the listings of the newest properties up for sale in Boston, Massachusetts we would run the 
 script as:
 
 ```
@@ -47,6 +47,6 @@ python3 zillow.py 02126 newest
 
 This will create a csv file:
 
- [Sample Output]
+ [Sample Output] (https://github.com/scrapehero/zillow_real_estate/blob/master/properties-02126%20(1).csv)
  
  
