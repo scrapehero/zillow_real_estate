@@ -6,7 +6,7 @@ This script will scrape Zillow.com, an online real estate database to extract re
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-##Fields to Extract
+### Fields to Extract
 
 Here are the following details we will be extracting:
 
