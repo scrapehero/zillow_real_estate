@@ -47,7 +47,6 @@ Installing lxml:
 pip3 install lxml
 ```
 
-Python Requests, to make requests and download the HTML content of the pages (http://docs.python-requests.org/en/master/user/install/).
 
 ## Running the scraper
 You must run the script using Python with arguments for zip code and sort. The sort argument has the options ‘newest’ and ‘cheapest’
