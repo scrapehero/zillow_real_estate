@@ -6,9 +6,9 @@ This script will scrape Zillow.com, an online real estate database to extract re
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Fields to Extract
+### Fields 
 
-Here are the following details we will be extracting:
+This zillow scraper can extract the fields below
 
 1. Title
 2. Street Name
@@ -60,6 +60,6 @@ python3 zillow.py 02126 newest
 
 This will create a csv file:
 
-[Sample Output] (https://raw.githubusercontent.com/scrapehero/zillow_real_estate/master/properties-02126.csv)
+[Sample Output](https://raw.githubusercontent.com/scrapehero/zillow_real_estate/master/properties-02126.csv)
  
  
