@@ -6,6 +6,20 @@ This script will scrape Zillow.com, an online real estate database to extract re
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
+##Fields to Extract
+
+Here are the following details we will be extracting:
+
+1. Title
+2. Street Name
+3. City
+4. State
+5. Zip Code
+6. Price
+7. Facts and Features
+8. Real Estate Provider
+9. URL
+
 ### Prerequisites
 
 For this web scraping tutorial using Python 3, we will need some packages for downloading and parsing the HTML. 
